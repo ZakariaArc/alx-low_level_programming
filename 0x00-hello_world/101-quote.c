@@ -1,10 +1,13 @@
 #include <unistd.h>
 /**
 * main - Entry point
-* Return: Return 1(Success)
+* description : c program that prints a quote
+* Return: Return 1
 */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(1.quo.59)
 	return (1);
 }
