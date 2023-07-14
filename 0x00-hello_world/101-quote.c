@@ -1,7 +1,8 @@
 #include <unistd.h>
 /**
 * main - Entry point
-* description : c program that prints a quote
+* Description : c program that prints a quote using write function
+*	write(int fd.const void *buf.size_t count)
 * Return: Return 1
 */
 int main(void)
