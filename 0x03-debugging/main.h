@@ -5,4 +5,4 @@
 
 void positive_or_negative(int i);
 
-sh: 1: q: not found
+#endif /* MAIN_H */
