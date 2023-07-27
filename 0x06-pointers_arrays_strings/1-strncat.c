@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * _strcat - a function that concantenates two strings
+  * _strncat - a function that concantenates two strings
   * @src: source input
   * @dest: destination input
   * @n: the number of bytes
