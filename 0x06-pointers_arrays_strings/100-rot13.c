@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * rot13 - function that encodes a string using rot13
@@ -11,7 +10,9 @@ char *rot13(char *c)
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (int i = 0; c[i] != '\0'; i++)
+	int i;
+
+	for (i = 0; c[i] != '\0'; i++)
 	{
 		char *ptr_a = a;
 		char *ptr_b = b;
