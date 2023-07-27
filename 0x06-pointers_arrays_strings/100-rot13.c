@@ -14,23 +14,13 @@ char *rot13(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		char *ptr_a = a;
-		char *ptr_b = b;
-		char *ptr = NULL;
-
-		while (*ptr_a != '\0')
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			if (*ptr_a == c[i])
+			if (c[i] == a[j])
 			{
-				ptr = ptr_b;
+				c[i] = b[j];
 				break;
 			}
-			ptr_a++;
-			ptr_b++;
-		}
-		if (ptr)
-		{
-			c[i] = *ptr;
 		}
 	}
 	return (c);
