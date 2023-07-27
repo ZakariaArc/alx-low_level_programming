@@ -18,20 +18,22 @@ void print_number(int n)
 		n1 = n;
 	}
 
-	int divisor = 1;
-	int temp = n1;
-
-	while (temp / 10 != 0)
 	{
-		divisor *= 10;
-		temp /= 10;
-	}
-	while (divisor != 0)
-	{
-		int digit = n1 / divisor;
+		unsigned int divisor = 1;
+		unsigned int temp = n1;
 
-		_putchar(digit + '0');
-		n1 -= (digit * divisor);
-		divisor /= 10;
+		while (temp / 10 != 0)
+		{
+			divisor *= 10;
+			temp /= 10;
+		}
+		while (divisor != 0)
+		{
+			int digit = n1 / divisor;
+			
+			putchar(digit + '0');
+			n1 -= (digit * divisor);
+			divisor /= 10;
+		}
 	}
 }
