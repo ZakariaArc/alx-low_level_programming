@@ -10,16 +10,29 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		n1 = -n;
 		_putchar('-');
+		n1 = -n;
 	}
 	else
 	{
 		n1 = n;
 	}
 
-	if (n1 / 10)
-		print_number(n1 / 10);
+	{
+		unsigned int divisor = 1;
+		unsigned int temp = n1;
 
-	_putchar((n1 % 10) + '0');
+		while (temp / 10 != 0)
+		{
+			divisor *= 10;
+			temp /= 10;
+		}
+		while (divisor != 0)
+		{
+			int digit = n1 / divisor;
+			_putchar(digit + '0');
+			n1 -= (digit * divisor);
+			divisor /= 10;
+		}
+	}
 }
