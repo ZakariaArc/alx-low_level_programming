@@ -18,8 +18,8 @@ void print_number(int n)
 		n1 = n;
 	}
 
-	int divisor = 1;
-	int temp = n1;
+	unsigned int divisor = 1;
+	unsigned int temp = n1;
 
 	while (temp / 10 != 0)
 	{
