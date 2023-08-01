@@ -5,7 +5,7 @@
  * set_string - a function that sets the value of a pointer to a char
  * @to: the string that we set the pointer to
  * @s: the pointer that will be set
- * Return: nothing (success)
+ * Return: 1 if successful, 0 if memory allocation failed
  */
 
 void set_string(char **s, char *to)
