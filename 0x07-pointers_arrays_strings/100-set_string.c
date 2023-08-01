@@ -18,6 +18,6 @@ void set_string(char **s, char *to)
 	}
 	else
 	{
-
+		return (0);
 	}
 }
