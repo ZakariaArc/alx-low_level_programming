@@ -39,4 +39,3 @@ char *argstostr(int ac, char **av)
 	str[total_len] = '\0';
 	return (str);
 }
-
