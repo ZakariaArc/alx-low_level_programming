@@ -1,5 +1,10 @@
 #ifndef _CALC
 #define _CALC
+/**
+  * struct op - the structure for holding operation data
+  * @op: the operator symbol
+  * @f: a function pointer to the corresponding operation function
+  */
 
 typedef struct op
 {

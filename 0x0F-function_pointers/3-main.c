@@ -7,7 +7,7 @@
  * @argv: the array of arguments
  * Return: 0 (Success)
  */
- 
+
 int main(int argc, char *argv[])
 {
 	int num1, num2;
@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-    num1 = atoi(argv[1]);
-    num2 = atoi(argv[3]);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	op_func = get_op_func(argv[2]);
 
