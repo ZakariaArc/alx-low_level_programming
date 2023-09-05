@@ -1,4 +1,7 @@
 #include "main.h"
+
+#define BUF_SIZE 1024
+
 int open_source_file(const char *filename);
 int open_destination_file(const char *filename);
 void copy_file_contents(int source_fd, int destination_fd);
