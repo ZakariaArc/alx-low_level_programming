@@ -1,5 +1,35 @@
 #include "hash_tables.h"
 /**
+ * add_node - function that adds a new node at the beginning of a linked list
+ * @key: the key for the new node
+ * @value: the value for the new node
+ * Return: the new node, or NULL on failure
+ */
+
+hash_node_t *add_node(const char *key, const char *value)
+{
+	hash_node_t *new_node = malloc(sizeof(hash_node_t));
+
+	if (new_node == NULL)
+		return (NULL);
+	new_node->key = strdup(key);
+	if (new_node->key == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	new_node->value = strdup(value);
+	if (new_node->value == NULL)
+	{
+		free(new_node->key);
+		free(new_node);
+		return (NULL);
+	}
+	new_node->next = NULL;
+	return (new_node);
+}
+
+/**
  * hash_table_set - function that adds an element to the hash table
  * @ht: the hash table to add or update the key/value to
  * @key: the key (cannot be an empty string)
@@ -31,22 +61,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current_node = current_node->next;
 	}
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = add_node(key, value);
 	if (new_node == NULL)
 		return (0);
-	new_node->key = strdup(key);
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (0);
-	}
-	new_node->value = strdup(value);
-	if (new_node->value == NULL)
-	{
-		free(new_node->key);
-		free(new_node);
-		return (0);
-	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
